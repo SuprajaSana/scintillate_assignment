@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll</title>
+    <style>
+      body {
+        background-color: rgb(176, 168, 168);
+      }
+      #div1 {
+        display: flex;
+        flex-direction: row;
+        background-color: bisque;
+        height: 600px;
+        width: 90%;
+        min-width: 1000px;
+        text-align: center;
+        margin-top: 75px;
+        margin-left: 75px;
+        border: 2px solid rgb(176, 168, 168);
+        border-radius: 10px;
+      }
+      #div2 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+      }
+      #div3 {
+        background-color: white;
+        width: 80%;
+      }
+      button {
+        height: 40px;
+        width: 250px;
+        border: 1px solid rgb(176, 168, 168);
+        background-color: white;
+        border-radius: 50px;
+        font-weight: bolder;
+        font-size: medium;
+        margin-top: 5px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <button style="margin-top: 30px; background-color: grey">
+          Programming Languages
+        </button>
+      </div>
+      <div id="div3">
+        <h1 style="text-align: center">
+          What is the best programming language out of these five?
+        </h1>
+        <canvas id="voteChart" style="height: 50vh; width: 100vw"></canvas>
+        <button onclick="vote(0)">JavaScript</button>
+        <button onclick="vote(1)">C#</button>
+        <button onclick="vote(2)">Java</button>
+        <button onclick="vote(3)">Python</button>
+        <button
+          style="background-color: blue; margin-top: 100px"
+          onclick="chatHandler()"
+        >
+          CHAT
+        </button>
+        <button
+          style="background-color: blue; margin-top: 100px"
+          onclick="logoutHandler()"
+        >
+          LOGOUT
+        </button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="./poll.js"></script>
+  </body>
+</html>

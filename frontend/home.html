@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        background-color: rgb(176, 168, 168);
+      }
+      div {
+        text-align: center;
+      }
+      button {
+        height: 50px;
+        width: 300px;
+        border: 1px solid rgb(176, 168, 168);
+        background-color: white;
+        border-radius: 50px;
+        font-weight: bolder;
+        font-size: larger;
+        box-shadow: 5px 5px rgb(88, 87, 87);
+      }
+      #poll {
+        margin-top: 210px;
+      }
+      #chat {
+        margin-top: 50px;
+      }
+      #logout {
+        background-color: blue;
+        color: white;
+        height: 40px;
+        width: 200px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: end">
+      <button id="logout" onclick="logoutHandler()">LOGOUT</button>
+    </div>
+    <div>
+      <button id="poll" onclick="pollHandler()">POLL</button>
+    </div>
+    <div>
+      <button id="chat" onclick="chatHandler()">CHAT</button>
+    </div>
+    <script src="./home.js"></script>
+  </body>
+</html>

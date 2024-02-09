@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+      body {
+        background-color: rgb(176, 168, 168);
+      }
+      #div1 {
+        display: flex;
+        flex-direction: row;
+        height: 600px;
+        background-color: bisque;
+        width: 80%;
+        min-width: 1000px;
+        text-align: center;
+        margin-top: 75px;
+        margin-left: 75px;
+        border: 2px solid rgb(176, 168, 168);
+        border-radius: 10px;
+      }
+      #div2 {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+      }
+      input {
+        text-align: center;
+        position: fixed;
+        bottom: 70px;
+        left: 400px;
+        width: 40%;
+        height: 30px;
+        border-radius: 5px;
+      }
+      button {
+        background-color: blue;
+        color: white;
+        position: fixed;
+        right: 400px;
+        bottom: 70px;
+        height: 35px;
+        width: 100px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <button
+        style="
+          border: 2px solid blue;
+          border-radius: 5px;
+          position: fixed;
+          top: 100px;
+          right: 300px;
+        "
+        onclick="pollHandler()"
+      >
+        POLL
+      </button>
+      <button
+        style="
+          border: 2px solid blue;
+          border-radius: 5px;
+          position: fixed;
+          top: 150px;
+          right: 300px;
+        "
+        onclick="logoutHandler()"
+      >
+        LOGOUT
+      </button>
+      <div id="div2"></div>
+      <div id="div3">
+        <div id="div4" style="display: flex; flex-direction: column">
+          <h1 style="margin-top: 250px; margin-left: 350px">Let's Connect</h1>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    <script src="./chat.js"></script>
+  </body>
+</html>
